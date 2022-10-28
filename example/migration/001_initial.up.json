@@ -1,0 +1,8 @@
+[
+  {
+    "create": "users"
+  },
+  {
+    "create": "projects"
+  }
+]

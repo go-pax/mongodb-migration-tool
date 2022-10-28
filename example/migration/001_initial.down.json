@@ -1,0 +1,8 @@
+[
+  {
+    "drop": "users"
+  },
+  {
+    "drop": "projects"
+  }
+]

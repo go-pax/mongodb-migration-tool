@@ -31,8 +31,11 @@ func Migrate(log *zap.SugaredLogger, command string, connectionString string, mi
 	}
 
 	err = fn()
-	if err != nil && err != migrate.ErrNoChange {
-		return err
+	if err != nil {
+		if err != migrate.ErrNoChange {
+			return err
+		}
+		log.Warn(err)
 	}
 
 	return nil

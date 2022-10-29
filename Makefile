@@ -1,3 +1,13 @@
-build:
-	go build -o dist/main -gcflags all=-N
-	#exec dist/main -- up mongodb://manager:password@localhost:27017/property?authSource=admin file://./example/migration
+SHELL := /bin/bash
+
+clean:
+	rm -rf dist/
+
+# ==============================================================================
+# Building binary on MAC
+# ==============================================================================
+
+BINARY_NAME := mongodb_migration
+
+build: clean
+	go build -o dist/$(BINARY_NAME) -gcflags all=-N

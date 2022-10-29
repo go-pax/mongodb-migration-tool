@@ -10,13 +10,13 @@ Uses the [Golang Migrate](https://github.com/golang-migrate/migrate/) package wi
 ### Examples
 
 Example, This runs all __up__ migrations in the folder _./example/migration_ with the extensions, `<NAME>.up.json`,
->dist/main up "mongodb://localhost:27017/my_db" file://./example/migration
+>dist/mongodb_migration up "mongodb://localhost:27017/my_db" file://./example/migration
 
 Example, This runs all __down__ migrations in the folder _./example/migration_ with the extensions, `<NAME>.down.json`,
->dist/main down "mongodb://localhost:27017/my_db" file://./example/migration
+>dist/mongodb_migration down "mongodb://localhost:27017/my_db" file://./example/migration
 
 Example, Connection with authentication,
->dist/main up "mongodb://user:pass@localhost:27017/my_db?authSource=admin" file://./example/migration
+>dist/mongodb_migration up "mongodb://user:pass@localhost:27017/my_db?authSource=admin" file://./example/migration
 
 Connection strings will vary so it is recommended you use a connection string that has been used before.
 
